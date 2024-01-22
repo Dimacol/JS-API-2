@@ -1,0 +1,82 @@
+<!--Вашей задачей является создание веб-слайдера для отображения изображений на веб-странице.
+
+Создайте интерфейс веб-страницы, который включает в себя следующие элементы:
+a. Контейнер для отображения текущего изображения.
+b. Кнопки "Предыдущее изображение" и "Следующее изображение" для переключения между изображениями.
+c. Навигационные точки (индикаторы) для быстрого переключения между изображениями.
+
+Для создания элементов интерфейса используйте HTML.
+При клике на кнопку "Предыдущее изображение" должно отображаться предыдущее изображение.
+При клике на кнопку "Следующее изображение" должно отображаться следующее изображение.
+При клике на навигационные точки, слайдер должен переключаться к соответствующему изображению.
+
+Слайдер должен циклически переключаться между изображениями, то есть после последнего изображения должно отображаться первое, и наоборот.
+
+Добавьте стилизацию для слайдера и элементов интерфейса с использованием CSS для улучшения внешнего вида.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+
+        <div class="mySlides">
+            <img class="animals" src="img/cat.jpg">
+        </div>
+      
+        <div class="mySlides">
+            <img class="animals" src="img/dog.jpeg" >
+        </div>
+      
+        <div class="mySlides">
+            <img class="animals" src="img/elephant.jpeg">
+        </div>
+      
+        <div class="mySlides">
+            <img class="animals" src="img/hamster.jpg" >
+        </div>
+      
+        <div class="mySlides">
+            <img class="animals" src="img/zebra.jpg" >
+        </div>
+      
+      
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="img/cat.jpg" style="width:100%" onclick="currentSlide(1)" alt="Кошка">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/dog.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Собака">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/elephant.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Слон">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/hamster.jpg" style="width:100%" onclick="currentSlide(4)" alt="Хомяк">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/zebra.jpg" style="width:100%" onclick="currentSlide(5)" alt="Зебра">
+          </div>
+          
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
